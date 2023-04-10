@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 引入JavaFX工具相关类 -->
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<!-- 创建一个GridPane网格式面板组件 -->
+<GridPane fx:controller="com.example.demo.HelloController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center"
+          hgap="10" vgap="10">
+    <!-- 通过相关标签创建一个模拟登录的“用户名”和“密码”的组件 -->
+    <Text text="OR-code生成" GridPane.columnIndex="0" GridPane.rowIndex="0"
+          GridPane.columnSpan="2" />
+    <Label text="采购订单号:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="cgddh" GridPane.columnIndex="1" GridPane.rowIndex="1" prefColumnCount="10"/>
+
+    <Label text="发货单位:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <TextField fx:id="fhdw" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <Label text="送货时间:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <TextField fx:id="shsj" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+    <Label text="车辆号码:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+    <TextField fx:id="clhm" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+    <Label text="司机姓名:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+    <TextField fx:id="sjxm" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+    <Label text="司机号码:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+    <TextField fx:id="sjhm" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+    <Label text="id:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+    <TextField fx:id="id" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+    <Label text="物料编码:" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+    <TextField fx:id="wlbm" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+    <Label text="批次号:" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+    <TextField fx:id="pch" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+
+    <Label text="收货数量:" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+    <TextField fx:id="shsl" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+
+    <!-- 通过HBox嵌入一个可调控位置的盒子组件-->
+    <HBox spacing="10" alignment="bottom_right" GridPane.columnIndex="0"
+          GridPane.rowIndex="11">
+        <!-- 在HBox盒子中装入一个 Button登录按钮，同时注册监听器 -->
+        <Button fx:id="actiontarget" text="生成" onAction="#handleSubmitButtonAction" />
+    </HBox>
+</GridPane>
